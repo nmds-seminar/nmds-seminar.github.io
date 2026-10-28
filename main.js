@@ -77,14 +77,12 @@
     dateEl.querySelector(".time").textContent = timeFmt.format(date);
 
     const talksEl = node.querySelector(".session-talks");
-    const join = node.querySelector(".session-join");
     const talks = session.talks.length
       ? [...session.talks].sort((a, b) => surname(a.speaker).localeCompare(surname(b.speaker)))
       : [{ title: "To be announced" }];
     for (const talk of talks) {
-      talksEl.insertBefore(renderTalk(talk), join);
+      talksEl.append(renderTalk(talk));
     }
-    if (variant !== "next") join.remove();
 
     return node;
   }
