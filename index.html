@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NMDS Seminar</title>
+  <meta name="description" content="A research seminar meeting on Wednesdays, alternating with the ACM Colloquium. Open to all.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main">
+    <div class="container">
+      <a class="brand" href="#">NMDS Seminar</a>
+      <ul>
+        <li><a href="#next">Next seminar</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#past">Past seminars</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Research seminar</span>
+      <h1>Numerical Mathematics and Data Science Seminar</h1>
+      <p>
+      Bringing together mathematicians and researchers from related fields to share recent work in the mathematics of data science.
+      </p>
+      <ul class="meta">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <details class="tip">
+            <summary>Most Wednesdays</summary>
+            <div class="tip-bubble" role="note">
+              We meet on Wednesdays two weeks out of three; every third week we make way
+              for the <a href="#">ACM Colloquium</a>.
+            </div>
+          </details>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          15:00 &ndash; 16:00
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Room 5327, <a href="https://maps.app.goo.gl/mVe8UkBSYH1wNoas5">JCMB</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <noscript>
+      <div class="container"><p class="empty">The seminar programme needs JavaScript to display.</p></div>
+    </noscript>
+
+    <section id="next">
+      <div class="container">
+        <h2 class="section-title">Next seminar</h2>
+        <div class="sessions" data-sessions="next"></div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <div class="container">
+        <h2 class="section-title">Upcoming</h2>
+        <div class="sessions" data-sessions="upcoming"></div>
+      </div>
+    </section>
+
+    <section id="past">
+      <div class="container">
+        <h2 class="section-title">Past seminars</h2>
+        <div class="sessions" data-sessions="past"></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Topics</h3>
+            <p>Probabilistic Machine Learning, Inverse problems, Bayesian Methods, Adversarial Attacks in Neural Networks and more.</p>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p>Room 5327, <a href="https://maps.app.goo.gl/mVe8UkBSYH1wNoas5">JCMB, Kings Buildings</a>.</p>
+            <!-- <p>Remote participants can join via the <a href="#">online link</a>.</p> -->
+          </div>
+          <div class="card">
+            <h3>Join for the Seminar</h3>
+            <p>Join the <a href="https://mlist.is.ed.ac.uk/lists/info/numdataseminar">mailing list</a> for weekly announcements, or <a href="https://www.google.com/calendar/embed?src=dg1v6m4nm4pq6v5nhokd9mg6sc@group.calendar.google.com&ctz=Europe/London">add the calendar</a>.</p>
+            <p>Want to give a talk? <a href="mailto:agrivas@ed.ac.uk">Get in touch</a>.</p>
+          </div>
+        </div>
+
+        <h3 class="subheading">Organisers</h3>
+        <ul class="organisers">
+          <li>Andreas Grivas <span>Institution</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&copy; 2026 NMDS Seminar</span>
+      <a href="mailto:seminar@example.org">seminar@example.org</a>
+    </div>
+  </footer>
+
+  <!-- A seminar day: date badge plus one or two talks (filled in by main.js) -->
+  <template id="session-template">
+    <article class="session">
+      <time class="session-date">
+        <span class="weekday"></span>
+        <span class="day"></span>
+        <span class="month"></span>
+        <span class="time"></span>
+      </time>
+      <div class="session-talks">
+        <!-- talks are inserted here -->
+        <a class="btn session-join" href="#">Join online &rarr;</a>
+      </div>
+    </article>
+  </template>
+
+  <!-- A single talk -->
+  <template id="talk-template">
+    <div class="talk">
+      <h3 class="talk-title"></h3>
+      <p class="talk-speaker"><span class="speaker"></span> <span class="affil"></span></p>
+      <details class="talk-abstract">
+        <summary>Abstract</summary>
+        <div class="abstract-body"></div>
+      </details>
+      <p class="talk-links"></p>
+    </div>
+  </template>
+
+  <script src="sessions.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
