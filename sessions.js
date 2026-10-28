@@ -21,10 +21,10 @@ const SESSIONS = [
         abstract: "Diffusion bridge processes are stochastic processes conditioned on their endpoints. Sampling from them is widely used in settings such as molecule transition states, financial modelling, and population dynamics. Their sampling is an infinite-dimensional problem , making standard Markov Chain Monte Carlo methods (MALA, RWM, e.g.) increasingly inefficient as the dimension is increased. An alternative framework involves preserving the Gaussian reference measure inherent to the target distribution. I will describe one such proposal, the implicit midpoint discretisation, and its extension to Hamiltonian Monte Carlo. Using diffusion bridges as an example, I will compare its applicability to infinite dimensional problems with the preconditioned Crank-Nicolson algorithm.",
       },
       {
-        title: "TBD",
+        title: "When can variational inference provably recover target statistics?",
         speaker: "Lena Zellinger",
         affiliation: "University of Edinburgh (Informatics)",
-        abstract: "",
+        abstract: " When approximating an intractable target distribution via variational inference (VI), the variational family is often chosen as a simple parametric family that does not contain the target. This raises the question: Under which conditions can we recover important summary statistics of the target despite misspecification of the variational family?\n\nIn this talk, I will discuss how symmetry in the target distribution can guarantee exact statistic recovery in polynomial time for VI with location-scale families. While existing results rely on simplifying assumptions such as log-concavity of the target, I will explain how we can guarantee exact mean and correlation recovery even for multi-modal and heavy-tailed targets by exploiting the flexibility of alpha-divergences. I will then discuss how these theoretical results can guide the choice of variational family and divergence in practice, and illustrate how optimization can fail to recover target statistics when our sufficient conditions are not satisfied. To conclude, I will touch on open theoretical questions on the approximation accuracy of VI and practical challenges that can arise in VI despite theoretical guarantees.",
       },
     ],
   },
