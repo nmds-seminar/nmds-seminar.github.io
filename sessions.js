@@ -31,6 +31,18 @@ const SESSIONS = [
   {
     datetime: "2026-11-25T15:00",
     talks: [
+      {
+        title: "TBD",
+        speaker: "Leander Kurscheidt",
+        affiliation: "University of Edinburgh (Informatics)",
+        abstract: "",
+      },
+      {
+        title: "TBD",
+        speaker: "Jack Geary",
+        affiliation: "University of Edinburgh (Informatics)",
+        abstract: "",
+      },
     ],
   },
   {
