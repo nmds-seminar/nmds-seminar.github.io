@@ -12,7 +12,7 @@
 
 const SESSIONS = [
   {
-    datetime: "2026-11-19T15:00",
+    datetime: "2026-11-11T15:00",
     talks: [
       {
         title: "The implicit midpoint discretization of Hamiltonian Monte Carlo and application to diffusion bridges",
