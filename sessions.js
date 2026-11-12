@@ -32,16 +32,16 @@ const SESSIONS = [
     datetime: "2026-11-25T15:00",
     talks: [
       {
-        title: "TBD",
+        title: "Predicting Probability Distributions under Algebraic Constraints",
         speaker: "Leander Kurscheidt",
         affiliation: "University of Edinburgh (Informatics)",
-        abstract: "",
+        abstract: "Machine learning models often treat predictions as unconstrained points, although real-world outputs must satisfy semantic constraints: trajectories should avoid obstacles, physical quantities must obey physical laws, and engineering designs must be feasible. While various projection-based approaches have been developed for constrained point predictions, ensuring that probability distributions satisfy such constraints is considerably less straightforward. This is particularly challenging for non-convex algebraic constraints, which can be expressed as conjunctions and disjunctions of linear inequalities.\n\nThe non-convex, potentially disconnected nature of these constraints rules out many standard reparameterization approaches. In this talk, I will introduce PAL, an approach to probabilistic predictions that cuts out infeasible probability mass and efficiently and exactly renormalizes the remaining distribution over the feasible space. I will discuss the general design of PAL and then dive into some of the challenges and solutions involved in scaling it to higher-dimensional problems.",
       },
       {
-        title: "TBD",
+        title: "Gaming the Classifier: Strategic Classification Beyond Linear Models",
         speaker: "Jack Geary",
         affiliation: "University of Edinburgh (Informatics)",
-        abstract: "",
+        abstract: "When a decision rule is made public, people adapt to it. A bank whose model rewards applicants for holding several lines of credit will see applicants open even more credit cards; a recruiter whose software screens CVs for keywords will receive CVs stuffed with them. In neither case has the candidate actually improved, so a classifier that was accurate on the historical data becomes less accurate once deployed. This is Goodhart’s law in practice.\n\nStrategic Classification models this as a game between a Learner, who publishes a classifier, and Agents, who independently modify their features at a cost to obtain a favourable decision. Fitting a classifier in this context becomes a bilevel optimization problem whose inner problem, the Agent’s best response, is discontinuous and generally intractable outside of linear models. As a result most of the work in this area has been restricted to linear, deterministic classifiers.\n\nIn this talk I will introduce the field of Strategic Classification, then present results from my recent work attempting to overcome this restriction: I will show how the problem can be generalised to non-linear models such as neural networks by approximating the best response using constrained optimisation and the implicit function theorem; I will also propose an alternative approach, which is to allow the Learner to deploy a randomised classifier, which we show can never do worse than the best deterministic classifier, and can sometimes do strictly better.",
       },
     ],
   },
