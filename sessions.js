@@ -47,7 +47,14 @@ const SESSIONS = [
   },
   {
     datetime: "2026-12-02T15:00",
-    talks: [],
+    talks: [
+      {
+        title: "Rounding error analysis of artificial neural networks in floating-point arithmetic",
+        speaker: "Théo Beuzeville",
+        affiliation: "University of Edinburgh (Maths)",
+        abstract: "The increasing size and computational cost of modern artificial neural networks have led to a massive use of low precision floating-point arithmetic to improve computation performance and reduce memory requirements. However, the use of reduce precision introduces rounding errors whose influence on the accuracy and stability of neural network computations is not yet fully understood.\n\nThe aim of this work is to provide a mathematical framework for understanding and quantifying the influence of floating-point rounding errors on the accuracy and stability of artificial neural networks. Building on tools from numerical linear algebra and rounding error analysis, we study how errors introduced by finite-precision arithmetic propagate through neural network computations and affect their numerical behaviour. We study the effect of different rounding modes on the resulting error and stability properties.\n\nThese analyses both ensure the proper functioning of neural networks once trained and provide recommendations on architectures, training methods, precision formats, and rounding strategies to enhance the robustness of neural networks when using floating-point arithmetic.",
+      },
+    ],
   },
 
   // Past seminars
